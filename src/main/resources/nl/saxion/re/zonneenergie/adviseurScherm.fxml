@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.re.zonneenergie.AdviseurScherm">
+    <left>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="180.0" fitWidth="414.0" layoutX="-14.0" layoutY="52.0">
+                    <image>
+                        <Image url="@../../../../../../image/ECRCEnergie.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="200.0" prefWidth="414.0" style="-fx-background-color: #D3D3D3;" BorderPane.alignment="CENTER">
+            <children>
+                <Text layoutX="25.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jaarlijks energieverbruik (kWh):" />
+                <TextField fx:id="energieverbruik" layoutX="25.0" layoutY="120.0" prefHeight="37.0" prefWidth="221.0" />
+                <Text layoutX="25.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dakoppervlak (m²):" />
+                <TextField fx:id="dakoppervlak" layoutX="25.0" layoutY="187.0" prefHeight="37.0" prefWidth="221.0" />
+                <Text layoutX="25.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecteer omvormer:" />
+                <ComboBox fx:id="omvormerComboBox" layoutX="25.0" layoutY="254.0" prefWidth="221.0" />
+                <Text layoutX="25.0" layoutY="317.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meterkast aanpassing nodig?" />
+                <ComboBox fx:id="meterkastComboBox" layoutX="25.0" layoutY="321.0" prefWidth="221.0" />
+                <Button fx:id="loguit" layoutX="77.0" layoutY="400.0" mnemonicParsing="false" onAction="#onLoguitButtonPressed" prefHeight="30.0" prefWidth="144.0" text="Loguit" />
+                <Button fx:id="berekenOfferte" layoutX="77.0" layoutY="364.0" mnemonicParsing="false" onAction="#berekenOfferte" text="Bereken offerte" />
+                <Label fx:id="offerteResultaat" layoutX="25.0" layoutY="450.0" prefWidth="221.0" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
